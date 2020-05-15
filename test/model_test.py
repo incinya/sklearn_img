@@ -1,12 +1,12 @@
 from unittest import TestCase
 from PIL import Image
 from conf import *
-from model import AIModel
+from model import SklearnModel
 
 
 class ModelTest(TestCase):
     def setUp(self) -> None:
-        self.m = AIModel()
+        self.m = SklearnModel()
 
     def test_model(self):
         x, y = self.m.modeling_imgs(in_path='../ops', size=SIZE_OP)

@@ -2,7 +2,7 @@ import re
 import requests
 from PIL import Image
 
-from img_main import YundaCode
+from img_main import Identifier
 from yunda_conf import *
 
 session = requests.Session()
@@ -16,7 +16,7 @@ def get_g_s():
         f.write(req)
 
     img = Image.open(filename)
-    word = YundaCode().main(img)
+    word = Identifier().main(img)
     # word = input("请输入验证码：")
     da = {"wen": order_number,
           "hx": "23",

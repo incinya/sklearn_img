@@ -5,7 +5,7 @@ from PIL import Image
 from sklearn.neighbors import KNeighborsClassifier
 
 
-class AIModel:
+class SklearnModel:
     @staticmethod
     def save_mode(x, y, model_name):
         knn = KNeighborsClassifier()
@@ -45,6 +45,8 @@ class AIModel:
 
     @staticmethod
     def img_to_1d_ary(img, size: tuple):
+        if not size:
+            size = img.size
         img = img.resize(size)
         ary = np.asarray(img).reshape(size[0] * size[1])
         return ary
@@ -52,7 +54,7 @@ class AIModel:
 
 if __name__ == '__main__':
     size1 = (13, 30)
-    a = AIModel()
+    a = SklearnModel()
     # x, y = a.modeling_imgs('origin', size1)
     # a.save_mode(x, y, 'origin.model')
     model = a.load_model('origin.model')
