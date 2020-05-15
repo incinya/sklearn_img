@@ -15,7 +15,7 @@ if __name__ == '__main__':
     y = Identifier()
     i = ImgHandler()
 
-    img1 = Image.open('raw_img/1.png')
+    img1 = Image.open('test/yunda_sample/1.png')
     img1 = i.two_value(img1)
     img1 = i.crop(img1)
 
