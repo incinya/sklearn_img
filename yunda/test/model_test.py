@@ -1,7 +1,6 @@
 from unittest import TestCase
 from PIL import Image
-from conf import *
-from model import SklearnModel
+from yunda.model import SklearnModel
 
 
 class ModelTest(TestCase):

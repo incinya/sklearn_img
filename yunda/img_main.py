@@ -1,6 +1,6 @@
 from PIL import Image
-from img_format import ImgHandler
-from model import SklearnModel
+from yunda.img_format import ImgHandler
+from yunda.model import SklearnModel
 
 
 class Identifier:

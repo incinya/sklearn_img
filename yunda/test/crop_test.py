@@ -1,7 +1,7 @@
 import os
 import unittest
 from PIL import Image
-from img_format import ImgHandler
+from yunda.img_format import ImgHandler
 
 
 class ImgTest(unittest.TestCase):
