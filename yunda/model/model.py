@@ -5,11 +5,10 @@ from PIL import Image
 from sklearn.neighbors import KNeighborsClassifier
 
 
-class SklearnModel:
+class SkModel:
     @staticmethod
     def save_mode(x, y, model_name):
         knn = KNeighborsClassifier()
-
         knn.fit(x, y)
         joblib.dump(knn, model_name)
 
@@ -54,7 +53,7 @@ class SklearnModel:
 
 if __name__ == '__main__':
     size1 = (13, 30)
-    a = SklearnModel()
+    a = SkModel()
     # x, y = a.modeling_imgs('origin', size1)
     # a.save_mode(x, y, 'origin.model')
     model = a.load_model('origin.model')

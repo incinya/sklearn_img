@@ -1,6 +1,10 @@
 from PIL import Image, ImageDraw
 
 
+def get_size(box):
+    return abs(box[2] - box[0]), abs(box[3] - box[1])
+
+
 class ImgHandler:
     @staticmethod
     def two_value(img, t=120):

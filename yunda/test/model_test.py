@@ -1,11 +1,12 @@
 from unittest import TestCase
-from PIL import Image
-from yunda.model import SklearnModel
+
+from model.img_main import *
+from model.model import SkModel
 
 
 class ModelTest(TestCase):
     def setUp(self) -> None:
-        self.m = SklearnModel()
+        self.m = SkModel()
 
     def test_model(self):
         x, y = self.m.modeling_imgs(in_path='../ops', size=SIZE_OP)
